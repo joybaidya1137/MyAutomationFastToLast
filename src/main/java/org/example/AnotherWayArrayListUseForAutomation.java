@@ -47,21 +47,21 @@ public class AnotherWayArrayListUseForAutomation {
         System.out.println("Now DisplayResult UrlText");
         System.out.println("UrlsText Number is :" +UrlsText.size());
 
-        //1 way
-        /*for(int j=0; j<UrlsText.size(); j++){
+       /*  //1 way
+        for(int j=0; j<UrlsText.size(); j++){
             System.out.println(j+" Number UrlsText is :" +UrlsText.get(j));
-        }*/
+        }
+
+
      //2 ways
-       /* for(String PrintUrlTexts:UrlsText) {
-            System.out.println(UrlsText.size()+"Prints UrlText is:" + PrintUrlTexts);
+        for(String PrintUrlTexts:UrlsText) {
+            System.out.println("Prints UrlText is:" + PrintUrlTexts);
             }*/
-
-     //3Ways
-        for(int j=0; j<UrlsText.size(); j++) {
-
-            for (String PrintUrlTexts : UrlsText) {
-                System.out.println(j + ".Prints UrlText is:" + PrintUrlTexts);
-            }
+//3 ways
+        int index = 0;
+        for (String PrintUrlTexts : UrlsText) {
+            System.out.println(index + " Number UrlText is: " + PrintUrlTexts);
+            index++;
         }
 
         driver.close();
