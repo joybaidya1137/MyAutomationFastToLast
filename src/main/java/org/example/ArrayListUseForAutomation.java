@@ -19,21 +19,17 @@ public class ArrayListUseForAutomation {
         List<WebElement> links = D.findElements(By.tagName("a"));
 
         ArrayList<String> LT = new ArrayList<>();  //(LT means Link Text)
-
-
-       ArrayList<String> URLs = new ArrayList<>();
+        ArrayList<String> URLs = new ArrayList<>();
 
 
 
         for(WebElement LinksStore:links){
 
             String LinkText = LinksStore.getText().trim();
-
             String UrlText = LinksStore.getAttribute("href");
 
-            if(!LinkText.isEmpty()){
+            if(!LinkText.isEmpty() && UrlText != null){
                 LT.add(LinkText);
-
                 URLs.add(UrlText);
             }
         }
